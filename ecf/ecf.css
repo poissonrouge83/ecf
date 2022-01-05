@@ -3,6 +3,7 @@
     height: 70px;
     z-index: 1;
     box-shadow: 0px 0PX 6PX 1PX rgb(155, 155, 155);
+    position: fixed;
 }
 
 .navbar-collapse{
@@ -106,7 +107,7 @@ a{
 
 #envoyer{
     margin-top: 6px;
-    background-color: rgb(54, 114, 224);
+    color: rgb(54, 114, 224);
     padding: 0;
 }
 
@@ -149,6 +150,8 @@ footer{
     margin-top: -10px;
 }
 
+/***********************media screen for width********************/
+/***********************media screen for width********************/
 
 
 @media screen and (max-width: 767px){
@@ -181,15 +184,77 @@ footer{
         position: relative;
         margin-left: 0;
     }
-
-    
-    
 }
+
 
 @media screen and (max-width: 540px){
     .nav-link{
         margin: 0;
     }
+}
+
+@media screen and (max-width: 380px){
+
+}
+    
+
+
+    /***********************media screen for height*****************/
+    /***********************media screen for height*****************/
+    
+
+    @media screen and (max-height: 1280px){
+
+
+        .col-sm-9{
+            margin-top: 100px;   
+        }
+        
+        .col-sm-3{
+            margin-top: 100px;
+        }
+
+
+
+
+        .ancre{
+          text-align: center;
+            height: 25px;
+         }
+
+
+        .form-control{
+            width: 80%;
+            height: 18px;
+            margin-left: 10%;
+        }
+        
+        #e-mail{
+            margin-top: -30px;
+        }
+        
+        #message{
+            margin-top: -18px;
+        
+        }
+        
+        #envoyer{
+            margin-top: 6px;
+            color: rgb(54, 114, 224);
+            padding: 0;
+            font-size: 12px;
+        }
+    }
+
 
     
-}
+    @media screen and (max-height: 1024px){
+        .col-sm-9{
+            margin-top: 80px;   
+        }
+        
+        .col-sm-3{
+            margin-top: 80px;
+        }
+    }
+
