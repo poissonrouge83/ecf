@@ -1,0 +1,443 @@
+
+* {
+    /*la taille des elements inclus les margin et padding*/
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/**NAVBAR**/
+
+.navbarr {
+    background-color: #f8f8f8;
+    height: 70px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 0px 4px 0px gray;
+    transition: box-shadow 1s;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.logo{
+    width: 110px;
+    height: 70px;
+}
+
+.nav-ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    margin-right:25%;
+}
+
+.nav-ul a {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    height: 56px;
+    text-decoration: none;
+    color: rgb(122, 122, 122);
+    /*Aulieu de 60px à cause des 4px de la progressBar*/
+    width: 100px;
+    font-size: 1.5rem;
+}
+
+
+.nav-ul a:hover {
+    background-color: rgba(43, 51, 56, 0.116);
+    color: white;
+    
+}
+
+
+/*Icone Hamburger*/
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+
+.hamburger :first-child {
+    /*1ere barre pas de margin top*/
+    margin-top: 0;
+}
+
+.bar1, .bar2, .bar3 {
+    margin-top: 5px;
+    width: 35px;
+    height: 5px;
+    border-radius: 4px;
+    background-color: rgb(105, 105, 105);
+    transition: all 0.2s;
+}
+
+
+.open .bar1 {
+    transform: translateY(200%) rotate(-45deg);
+}
+
+.open .bar2 {
+    opacity: 0;
+    transform: rotate(45deg);
+}
+
+.open .bar3 {
+    transform: translateY(-200%) rotate(45deg);
+}
+
+.noScroll {
+    /*empeche le scroll sur le body via JS*/
+    overflow: hidden;
+}
+
+
+/****************************************************main*********************************************/
+/************************************************main*************************************************/
+/****************************************************main*********************************************/
+/***********************************************main**************************************************/
+
+main{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*****************box de gauche******************/
+
+
+section{
+    margin-top: 20px;
+    
+}
+
+article{
+    padding: 20px;
+    text-align: center;
+    width: 65%;
+    margin: 30px;
+    border-radius: 45px;
+    color: rgb(235, 235, 235);
+    background-color: #212529;
+    box-shadow: 0px 0px 4px 1px gray;
+}
+
+
+/*******************box de droite**********************/
+
+
+aside{
+    position: fixed;
+    width: 25%;
+    height:100%;
+    margin-top: 50px;
+    margin-left: 70%;
+    border-radius: 0px 45px 0px 0px;
+    box-shadow: 0px 0px 4px 1px gray;
+    
+}
+
+
+
+.box-articles-consultés{
+    background-color: rgb(51, 197, 255);
+    height: 200px;
+    margin: 30px;
+    border-radius: 0px 45px 0px 0px;
+    box-shadow: 0px 0px 4px 1px gray;
+    color: #212529;
+    padding: 2.5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "titre"
+    "box1"
+    "box2"
+    "box3";
+}
+
+
+.ancre{     
+    box-shadow: 0px 0px 4px 1px gray;
+    color: #868686;
+    padding: 2.5px;
+    margin-bottom: 4px;
+    background-color: rgb(240, 240, 240);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.ancre:hover{
+    background-image: linear-gradient(to bottom, rgb(216, 127, 161), rgb(83, 172, 255));
+    color: white;
+    
+}
+
+h5{
+    grid-area: titre;
+}
+
+.ancre1{
+    grid-area: box1;
+    text-align: center;
+    
+
+}
+
+.ancre4{
+    grid-area: box2;
+    text-align: center;
+
+}
+
+.ancre6{
+    grid-area: box3;
+    text-align: center;
+
+}
+
+
+.video{
+    background-color: rgb(51, 197, 255);
+    height: 200px;
+    margin: 30px;
+    border-radius: 0px 45px 0px 0px;
+    box-shadow: 0px 0px 4px 1px gray;
+}
+
+
+form{
+    background-color: rgb(51, 197, 255);
+    height: 200px;
+    margin: 30px;
+    border-radius: 0px 45px 0px 0px;
+    box-shadow: 0px 0px 4px 1px gray;
+}
+
+
+.form-control{
+    width: 100%;
+    height: 20%;
+}
+
+#e-mail{
+    margin-top: -12px;
+}
+
+#message{
+    margin-top: -18px;
+}
+
+#envoyer{
+    margin-top: 6px;
+    color: rgb(54, 114, 224);
+}
+
+#envoyer:hover{
+    background-image: linear-gradient(to bottom, rgb(216, 127, 161), rgb(83, 172, 255));
+}
+
+
+/***********************footer*********************/
+
+
+footer{
+    position:sticky;
+    bottom:0vh;
+    width:100%;
+    padding-top:50px;
+    height:70px;
+    box-shadow: 0px 0PX 6PX 1PX rgb(155, 155, 155);
+}
+
+.cgu{
+    color: #212529;
+    
+}
+
+
+.mention{
+    color: #212529;
+    
+}
+
+
+.item-footer{
+    margin-top: -30px;
+}
+
+
+.logo-footer{
+    width: 50PX;
+    height: auto;
+    margin-top: -10px;
+}
+/*************************************************media screen width*****************************************************/
+/*************************************************media screen width*****************************************************/
+            /*************************************media screen width**********************************/
+            /****************************************************************************************/
+                        /*************************************************************/
+                                      /**********media screen width******************/
+
+@media screen and (max-width: 800px){
+
+
+    .hamburger {
+       display: flex;
+    }
+    .nav-ul {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        background-color: rgba(128, 128, 128, 0.384);
+        transition: transform 0.5s ease-out;
+    }
+    .slide {
+        transform: translate(100%);
+    }
+    .nav-ul a {
+        justify-content: left;
+        padding-left: 5px;
+        width: 50%;
+        border-bottom: 1px solid rgba(241, 241, 241, 0.473);
+    }
+    .nav-ul a:hover {
+        border-radius: 0;
+        animation: none;
+    }
+    
+    
+    main{
+        display: block;
+    }
+
+    
+    section{
+        padding-left: 15%;
+        width: 100%;
+        background-color: rgba(208, 242, 255, 0.247);
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    article{
+    width: 90%;
+    margin-left: -10px;
+}
+
+    aside{
+        width: 80%;
+        position: relative;
+        margin-left: 10%;
+        border-radius: 0px 0px 0px 0px;
+        box-shadow: 0px 0px 0px 0px;
+    }
+
+    .ancre{
+    
+        box-shadow: 0px 0px 4px 1px gray;
+        color: #868686;
+        padding: 2.5px;
+        margin-bottom: 4px;
+        background-color: rgb(240, 240, 240);
+        text-align: center;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-left: 40px;
+        margin-right: 40px;
+        
+    }
+
+   
+
+    
+}
+
+/**************************************************media screen pour hauteur******************************/
+/**************************************************media screen pour hauteur******************************/
+
+/*@media screen and (max-height: 1280px){
+
+    .box-articles-consultés{
+        height: 200px;
+    }
+
+
+    .video{
+        height: 200px;
+    }
+
+
+    form{
+        height: 200px;
+    }
+
+    .form-control{
+        margin-top: -20px;
+    }
+}*/
+
+
+/*@media screen and (max-height: 1024px){
+
+    h5{
+        font-size: 12px;
+    }
+
+
+    .box-articles-consultés{
+        height: 100px;
+    }
+
+    .ancre{
+    
+        box-shadow: 0px 0px 4px 1px gray;
+        color: #212529;
+        padding: 0px;
+        margin-bottom: 4px;
+        border-radius: 5px;
+        font-size: 10px;
+    }
+    
+
+    .video{
+        height: 100px;
+    }
+
+
+    form{
+        height: 100px;
+    }
+
+    .form-control{
+        margin-top: -20px;
+        font-size: 10px;
+        margin-bottom: -4px;
+    }
+}*/
+
+
+
